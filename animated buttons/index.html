@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            *
+            {
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+            .btn
+            {
+                color: white;
+                background-color: #e84949;
+                border: none;
+                padding: 0.8rem 2.3rem;
+                box-shadow: 10px 10px;
+                font-size: 18px;
+                box-shadow: 5px 5px 7px 0px #0000003f;
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+            }
+            .wrapper
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* height: 350px; */
+                width: 100vw;
+                height: 100vh;
+            }
+            /* .btn::before
+            {
+                content: "abcd";
+            }
+            .btn::after
+            {
+                content: "abcd";
+            } */
+            .btn::before
+            {
+                content: ""; 
+                background-color: #1f1f1f;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: -1;
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+            .btn:hover::before
+            {
+                transform: scaleX(1);
+                transition: all 1s;
+            }
+    </style>
+</head>
+<body>
+        <div class="wrapper">
+        <button class="btn">Hire me</button>
+        </div>
+</body>
+</html>
